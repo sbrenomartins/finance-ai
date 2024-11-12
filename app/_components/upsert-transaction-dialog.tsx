@@ -137,7 +137,10 @@ const UpsertTransactionDialog = ({
         </DialogHeader>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="scrollbar-hidden max-h-[80vh] space-y-8 overflow-y-auto"
+          >
             <FormField
               control={form.control}
               name="name"

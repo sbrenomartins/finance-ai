@@ -7,16 +7,18 @@ const TransactionsPage = async () => {
   const transactions = await db.transaction.findMany({});
 
   return (
-    <div className="space-y-6 p-6">
-      {/* Título e Botão */}
-      <div className="flex w-full items-center justify-between">
-        <h1 className="text-2xl font-bold">Transações</h1>
-        <AddTransactionButton />
-      </div>
+    <>
+      <div className="space-y-6 p-6">
+        {/* Título e Botão */}
+        <div className="flex w-full items-center justify-between">
+          <h1 className="text-2xl font-bold">Transações</h1>
+          <AddTransactionButton />
+        </div>
 
-      {/* Table */}
-      <DataTable columns={transactionColumns} data={transactions} />
-    </div>
+        {/* Table */}
+        <DataTable columns={transactionColumns} data={transactions} />
+      </div>
+    </>
   );
 };
 
